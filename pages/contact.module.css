@@ -1,0 +1,257 @@
+.pageHeader {
+  background-color: var(--surface);
+  padding: var(--spacing-12) 0;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: var(--spacing-12);
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-4);
+}
+
+.pageTitle {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: var(--spacing-4);
+  color: var(--foreground);
+}
+
+.pageSubtitle {
+  font-size: 1.25rem;
+  color: var(--muted-foreground);
+  max-width: 700px;
+  line-height: 1.6;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-12);
+  margin-bottom: var(--spacing-16);
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+/* Form Section */
+.card {
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--spacing-8);
+  box-shadow: var(--shadow-sm);
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-6);
+  color: var(--foreground);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+@media (min-width: 640px) {
+  .row {
+    flex-direction: row;
+  }
+}
+
+.halfWidth {
+  flex: 1;
+}
+
+.required {
+  color: var(--error);
+}
+
+.submitBtn {
+  margin-top: var(--spacing-4);
+  align-self: flex-start;
+}
+
+/* Info Section */
+.infoSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+}
+
+.infoCard {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--spacing-6);
+}
+
+.infoCard h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-6);
+  color: var(--foreground);
+}
+
+.infoList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+}
+
+.infoItem {
+  display: flex;
+  gap: var(--spacing-4);
+}
+
+.infoIcon {
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.infoItem strong {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: var(--spacing-1);
+  color: var(--foreground);
+}
+
+.infoItem a,
+.infoItem p {
+  color: var(--muted-foreground);
+  text-decoration: none;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.infoItem a:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.mapCard {
+  border-radius: var(--radius);
+  overflow: hidden;
+  height: 250px;
+  border: 1px solid var(--border);
+}
+
+.mapPlaceholder {
+  width: 100%;
+  height: 100%;
+  background-color: var(--muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted-foreground);
+  font-weight: 500;
+}
+/* Added for the 2026 public site */
+.label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--foreground);
+  margin-bottom: var(--spacing-2);
+}
+
+.select {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background-color: var(--surface);
+  color: var(--foreground);
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.select:focus {
+  outline: none;
+  box-shadow: var(--shadow-focus);
+  border-color: var(--primary);
+}
+
+.error {
+  color: var(--error);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.formNote {
+  font-size: 0.85rem;
+  color: var(--muted-foreground);
+  margin: var(--spacing-2) 0 0;
+}
+
+.sent {
+  display: flex;
+  gap: var(--spacing-4);
+  align-items: flex-start;
+  padding: var(--spacing-6);
+  border-radius: var(--radius);
+  background-color: hsl(152 65% 38% / 0.1);
+  border: 1px solid hsl(152 65% 38% / 0.35);
+}
+
+.sent p {
+  margin: var(--spacing-1) 0 0;
+  color: var(--muted-foreground);
+}
+
+.sentIcon {
+  color: var(--secondary);
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+}
+
+.infoTitle {
+  color: var(--muted-foreground);
+  margin: calc(-1 * var(--spacing-3)) 0 var(--spacing-5);
+  font-size: 0.95rem;
+}
+
+.fundingCard {
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--secondary);
+  border-radius: var(--radius);
+  padding: var(--spacing-6);
+  margin-top: var(--spacing-6);
+}
+
+.fundingCard h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-3);
+}
+
+.fundingCard p {
+  color: var(--muted-foreground);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-3);
+}
+
+.fundingLink {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.fundingLink:hover {
+  text-decoration: underline;
+}

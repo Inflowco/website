@@ -1,0 +1,255 @@
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-6);
+  gap: var(--spacing-4);
+  flex-wrap: wrap;
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-foreground);
+  margin: 0 0 var(--spacing-1);
+}
+
+.subtitle {
+  font-size: 0.875rem;
+  color: var(--color-muted-foreground);
+  margin: 0;
+}
+
+.filters {
+  display: flex;
+  gap: var(--spacing-3);
+  margin-bottom: var(--spacing-4);
+  flex-wrap: wrap;
+}
+
+.searchBox {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  padding: var(--spacing-2) var(--spacing-3);
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.searchBox input {
+  flex: 1;
+  border: none;
+  background: none;
+  font-size: 0.875rem;
+  color: var(--color-foreground);
+  outline: none;
+}
+
+.searchBox input::placeholder {
+  color: var(--color-muted-foreground);
+}
+
+.searchBox svg {
+  color: var(--color-muted-foreground);
+}
+
+.categoryFilter {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  padding: var(--spacing-2) var(--spacing-3);
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.categoryFilter svg {
+  color: var(--color-muted-foreground);
+}
+
+.categoryFilter select {
+  border: none;
+  background: none;
+  font-size: 0.875rem;
+  color: var(--color-foreground);
+  cursor: pointer;
+}
+
+.stats {
+  display: flex;
+  gap: var(--spacing-4);
+  margin-bottom: var(--spacing-6);
+  padding: var(--spacing-4);
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.statItem {
+  flex: 1;
+  text-align: center;
+}
+
+.statValue {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-foreground);
+}
+
+.statLabel {
+  font-size: 0.75rem;
+  color: var(--color-muted-foreground);
+}
+
+.documentList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.documentCard {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  padding: var(--spacing-3) var(--spacing-4);
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  transition: all 0.15s ease;
+}
+
+.documentCard:hover {
+  border-color: var(--color-primary);
+}
+
+.documentIcon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-muted);
+  border-radius: var(--radius-md);
+  color: var(--color-muted-foreground);
+}
+
+.documentInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.documentInfo h3 {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-foreground);
+  margin: 0 0 var(--spacing-1);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.documentMeta {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.documentDate {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  font-size: 0.75rem;
+  color: var(--color-muted-foreground);
+}
+
+.documentStatus {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  font-size: 0.75rem;
+  color: var(--color-muted-foreground);
+}
+
+.statusReady {
+  color: var(--color-success);
+}
+
+.statusProcessing {
+  color: var(--color-warning);
+  animation: spin 1s linear infinite;
+}
+
+.statusFailed {
+  color: var(--color-destructive);
+}
+
+.documentActions {
+  display: flex;
+  gap: var(--spacing-1);
+}
+
+.emptyState,
+.loadingState {
+  text-align: center;
+  padding: var(--spacing-12);
+  color: var(--color-muted-foreground);
+}
+
+.emptyState svg {
+  margin-bottom: var(--spacing-4);
+  color: var(--color-primary);
+}
+
+.emptyState h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-foreground);
+  margin: 0 0 var(--spacing-2);
+}
+
+.emptyState p {
+  max-width: 400px;
+  margin: 0 auto var(--spacing-6);
+}
+
+.uploadDialog {
+  max-width: 500px;
+}
+
+.uploadContent {
+  padding: var(--spacing-4) 0;
+}
+
+.uploadHint {
+  font-size: 0.75rem;
+  color: var(--color-muted-foreground);
+  text-align: center;
+  margin: var(--spacing-3) 0 0;
+}
+
+.uploadingState {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-2);
+  margin-top: var(--spacing-4);
+  color: var(--color-muted-foreground);
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

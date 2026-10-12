@@ -1,0 +1,260 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-family-base);
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-4);
+}
+
+/* Header */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-nav-sticky);
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  height: 4.5rem;
+  display: flex;
+  align-items: center;
+}
+
+:global(.dark) .header {
+  background-color: rgba(10, 20, 30, 0.9);
+}
+
+.headerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logoImage {
+  height: 2.5rem;
+  width: auto;
+}
+
+.logoImageFooter {
+  height: 2rem;
+  width: auto;
+}
+
+/* Desktop Nav */
+.desktopNav {
+  display: none;
+  align-items: center;
+  gap: var(--spacing-6);
+}
+
+@media (min-width: 768px) {
+  .desktopNav {
+    display: flex;
+  }
+}
+
+.navLink {
+  text-decoration: none;
+  color: var(--muted-foreground);
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color var(--animation-duration-fast);
+}
+
+.navLink:hover,
+.navLink.active {
+  color: var(--primary);
+}
+
+/* Mobile Nav */
+.mobileToggle {
+  display: block;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--foreground);
+  padding: var(--spacing-2);
+}
+
+@media (min-width: 768px) {
+  .mobileToggle {
+    display: none;
+  }
+}
+
+.mobileNav {
+  position: absolute;
+  top: 4.5rem;
+  left: 0;
+  width: 100%;
+  background-color: var(--background);
+  border-bottom: 1px solid var(--border);
+  padding: var(--spacing-4) 0;
+  animation: slideDown var(--animation-duration-fast) ease-out;
+  box-shadow: var(--shadow-lg);
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.mobileNavLink {
+  display: block;
+  padding: var(--spacing-3) 0;
+  text-decoration: none;
+  color: var(--foreground);
+  font-weight: 500;
+  border-bottom: 1px solid var(--border);
+}
+
+.mobileNavLink:last-child {
+  border-bottom: none;
+}
+
+.mobileNavLink.active {
+  color: var(--primary);
+}
+
+.mobileNavCta {
+  margin-top: var(--spacing-4);
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+/* Main */
+.main {
+  flex: 1;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--surface);
+  border-top: 1px solid var(--border);
+  padding: var(--spacing-12) 0 var(--spacing-6);
+  margin-top: auto;
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-8);
+  margin-bottom: var(--spacing-12);
+}
+
+@media (min-width: 768px) {
+  .footerGrid {
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  }
+}
+
+.footerBrand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-4);
+}
+
+.footerDesc {
+  color: var(--muted-foreground);
+  line-height: 1.6;
+  max-width: 300px;
+}
+
+.footerLinks h4,
+.footerExternal h4 {
+  font-family: var(--font-family-heading);
+  font-weight: 700;
+  margin-bottom: var(--spacing-4);
+  color: var(--foreground);
+}
+
+.footerLinks ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.footerLinks a {
+  text-decoration: none;
+  color: var(--muted-foreground);
+  transition: color var(--animation-duration-fast);
+}
+
+.footerLinks a:hover {
+  color: var(--primary);
+}
+
+.footerExternal p {
+  color: var(--muted-foreground);
+  margin-bottom: var(--spacing-4);
+  font-size: 0.9rem;
+}
+
+.externalLinks {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.externalLink {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.externalLink:hover {
+  text-decoration: underline;
+}
+
+.footerBottom {
+  border-top: 1px solid var(--border);
+  padding-top: var(--spacing-6);
+  text-align: center;
+  color: var(--muted-foreground);
+  font-size: 0.875rem;
+}
+/* Added for the 2026 public site */
+.footerContact {
+  color: var(--muted-foreground);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.footerContact a {
+  color: var(--muted-foreground);
+  text-decoration: none;
+}
+
+.footerContact a:hover {
+  color: var(--primary);
+}
+
+.awardLine {
+  color: var(--foreground);
+  font-weight: 500;
+  margin-bottom: var(--spacing-2);
+}

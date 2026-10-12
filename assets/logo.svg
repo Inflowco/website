@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <linearGradient id="airGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a5276"/>
+      <stop offset="100%" style="stop-color:#0d3d56"/>
+    </linearGradient>
+    <linearGradient id="nodeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2e8b57"/>
+      <stop offset="100%" style="stop-color:#228b4a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Outer ring (pressure gauge) -->
+  <circle cx="60" cy="60" r="54" fill="none" stroke="url(#airGradient)" stroke-width="4"/>
+
+  <!-- Inner circle -->
+  <circle cx="60" cy="60" r="44" fill="url(#airGradient)" opacity="0.1"/>
+
+  <!-- Air flow curves -->
+  <path d="M 25 60 Q 40 45, 55 50 T 85 55" fill="none" stroke="url(#airGradient)" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M 30 70 Q 45 60, 60 62 T 90 58" fill="none" stroke="url(#airGradient)" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+  <path d="M 28 80 Q 50 72, 65 75 T 92 68" fill="none" stroke="url(#airGradient)" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+
+  <!-- Neural network connections -->
+  <line x1="40" y1="40" x2="60" y2="55" stroke="url(#nodeGradient)" stroke-width="2" opacity="0.6"/>
+  <line x1="60" y1="55" x2="85" y2="45" stroke="url(#nodeGradient)" stroke-width="2" opacity="0.6"/>
+  <line x1="60" y1="55" x2="75" y2="75" stroke="url(#nodeGradient)" stroke-width="2" opacity="0.6"/>
+  <line x1="40" y1="40" x2="35" y2="65" stroke="url(#nodeGradient)" stroke-width="2" opacity="0.6"/>
+  <line x1="35" y1="65" x2="60" y2="55" stroke="url(#nodeGradient)" stroke-width="2" opacity="0.6"/>
+  <line x1="75" y1="75" x2="55" y2="85" stroke="url(#nodeGradient)" stroke-width="2" opacity="0.6"/>
+
+  <!-- AI nodes -->
+  <circle cx="40" cy="40" r="5" fill="url(#nodeGradient)"/>
+  <circle cx="60" cy="55" r="7" fill="url(#nodeGradient)"/>
+  <circle cx="85" cy="45" r="4" fill="url(#nodeGradient)"/>
+  <circle cx="35" cy="65" r="4" fill="url(#nodeGradient)"/>
+  <circle cx="75" cy="75" r="5" fill="url(#nodeGradient)"/>
+  <circle cx="55" cy="85" r="4" fill="url(#nodeGradient)"/>
+
+  <!-- Center pulse indicator -->
+  <circle cx="60" cy="55" r="3" fill="#fff"/>
+</svg>

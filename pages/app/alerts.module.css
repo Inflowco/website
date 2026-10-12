@@ -1,0 +1,254 @@
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-6);
+  gap: var(--spacing-4);
+  flex-wrap: wrap;
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-foreground);
+  margin: 0 0 var(--spacing-1);
+}
+
+.subtitle {
+  font-size: 0.875rem;
+  color: var(--color-muted-foreground);
+  margin: 0;
+}
+
+.alertList, .ruleList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+  margin-top: var(--spacing-4);
+}
+
+.alertCard {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-3);
+  padding: var(--spacing-4);
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  border-left-width: 4px;
+}
+
+.alertCard.critical {
+  border-left-color: var(--color-destructive);
+}
+
+.alertCard.warning {
+  border-left-color: var(--color-warning);
+}
+
+.alertCard.info {
+  border-left-color: var(--color-info);
+}
+
+.alertCard.acknowledged {
+  opacity: 0.7;
+  border-left-color: var(--color-muted-foreground);
+}
+
+.alertIcon {
+  flex-shrink: 0;
+}
+
+.critical .alertIcon {
+  color: var(--color-destructive);
+}
+
+.warning .alertIcon {
+  color: var(--color-warning);
+}
+
+.info .alertIcon {
+  color: var(--color-info);
+}
+
+.alertContent {
+  flex: 1;
+}
+
+.alertContent h3 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-foreground);
+  margin: 0 0 var(--spacing-1);
+}
+
+.alertContent p {
+  font-size: 0.875rem;
+  color: var(--color-muted-foreground);
+  margin: 0 0 var(--spacing-2);
+}
+
+.alertTime {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  font-size: 0.75rem;
+  color: var(--color-muted-foreground);
+}
+
+.ruleCard {
+  padding: var(--spacing-4);
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.ruleHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-2);
+}
+
+.ruleHeader h3 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-foreground);
+  margin: 0;
+}
+
+.ruleCondition {
+  font-size: 0.875rem;
+  color: var(--color-muted-foreground);
+  margin: 0 0 var(--spacing-3);
+}
+
+.ruleMeta {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  font-size: 0.75rem;
+  color: var(--color-muted-foreground);
+}
+
+.empty {
+  text-align: center;
+  padding: var(--spacing-12);
+  color: var(--color-muted-foreground);
+}
+
+.empty svg {
+  margin-bottom: var(--spacing-4);
+}
+
+.empty h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-foreground);
+  margin: 0 0 var(--spacing-2);
+}
+
+.empty p {
+  margin: 0 0 var(--spacing-4);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+  padding: var(--spacing-4) 0;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.field label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-foreground);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-4);
+}
+
+.select {
+  padding: var(--spacing-2) var(--spacing-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-size: 0.875rem;
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+}
+
+.connectionStatus {
+  display: flex;
+  align-items: center;
+}
+
+.connected {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  padding: var(--spacing-1) var(--spacing-2);
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--color-success);
+  border-radius: var(--radius-md);
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.connected::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--color-success);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.disconnected {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  padding: var(--spacing-1) var(--spacing-2);
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--color-destructive);
+  border-radius: var(--radius-md);
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.testDescription {
+  font-size: 0.875rem;
+  color: var(--color-muted-foreground);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.hint {
+  font-size: 0.75rem;
+  color: var(--color-muted-foreground);
+  margin-top: var(--spacing-1);
+}

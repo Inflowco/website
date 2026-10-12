@@ -1,0 +1,187 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-6);
+  gap: var(--spacing-4);
+  flex-wrap: wrap;
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-foreground);
+  margin: 0 0 var(--spacing-1);
+}
+
+.subtitle {
+  font-size: 0.875rem;
+  color: var(--color-muted-foreground);
+  margin: 0;
+}
+
+.section {
+  margin-bottom: var(--spacing-8);
+}
+
+.sectionTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-foreground);
+  margin: 0 0 var(--spacing-4);
+}
+
+.loading {
+  text-align: center;
+  padding: var(--spacing-8);
+  color: var(--color-muted-foreground);
+}
+
+.sensorGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--spacing-4);
+}
+
+.sensorCard {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-4);
+}
+
+.sensorIcon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-primary);
+  color: white;
+  border-radius: var(--radius-md);
+}
+
+.sensorInfo {
+  flex: 1;
+}
+
+.sensorInfo h3 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-foreground);
+  margin: 0 0 var(--spacing-1);
+}
+
+.sensorInfo p {
+  font-size: 0.75rem;
+  color: var(--color-muted-foreground);
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.sensorActions {
+  display: flex;
+  gap: var(--spacing-1);
+}
+
+.empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: var(--spacing-8);
+  color: var(--color-muted-foreground);
+}
+
+.empty p {
+  margin: 0 0 var(--spacing-4);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+  padding: var(--spacing-4) 0;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.field label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-foreground);
+}
+
+.select {
+  padding: var(--spacing-2) var(--spacing-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-size: 0.875rem;
+}
+
+.equipmentList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.equipmentCard {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-4);
+}
+
+.equipmentHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-2);
+}
+
+.equipmentHeader h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-foreground);
+  margin: 0;
+}
+
+.equipmentType {
+  font-size: 0.75rem;
+  text-transform: capitalize;
+  background: var(--color-muted);
+  padding: var(--spacing-1) var(--spacing-2);
+  border-radius: var(--radius-sm);
+  color: var(--color-muted-foreground);
+}
+
+.equipmentMeta {
+  font-size: 0.875rem;
+  color: var(--color-muted-foreground);
+  margin: 0 0 var(--spacing-3);
+}
+
+.equipmentSensors {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.875rem;
+  color: var(--color-primary);
+  cursor: pointer;
+}
+
+.equipmentSensors:hover {
+  text-decoration: underline;
+}

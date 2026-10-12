@@ -1,0 +1,225 @@
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-4);
+}
+
+.pageHeader {
+  background-color: var(--surface);
+  padding: var(--spacing-12) 0;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: var(--spacing-12);
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--secondary);
+  margin-bottom: var(--spacing-3);
+}
+
+.pageTitle {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: var(--spacing-4);
+  color: var(--foreground);
+}
+
+@media (max-width: 768px) {
+  .pageTitle {
+    font-size: 1.9rem;
+  }
+}
+
+.pageSubtitle {
+  font-size: 1.2rem;
+  color: var(--muted-foreground);
+  max-width: 760px;
+  line-height: 1.6;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-10);
+  align-items: start;
+  margin-bottom: var(--spacing-16);
+}
+
+@media (min-width: 900px) {
+  .split {
+    grid-template-columns: 1.4fr 1fr;
+  }
+}
+
+.sectionTitle {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--foreground);
+  margin-bottom: var(--spacing-2);
+}
+
+.role {
+  color: var(--secondary);
+  font-weight: 600;
+  margin-bottom: var(--spacing-4);
+}
+
+.textBody {
+  color: var(--muted-foreground);
+  line-height: 1.7;
+  font-size: 1.05rem;
+  margin-bottom: var(--spacing-4);
+}
+
+.facts {
+  margin: var(--spacing-6) 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.facts div {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: var(--spacing-4);
+  padding-bottom: var(--spacing-3);
+  border-bottom: 1px solid var(--border);
+}
+
+.facts dt {
+  font-weight: 700;
+  color: var(--foreground);
+  font-size: 0.9rem;
+}
+
+.facts dd {
+  margin: 0;
+  color: var(--muted-foreground);
+  line-height: 1.5;
+}
+
+.awardCard {
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--spacing-6);
+  box-shadow: var(--shadow);
+}
+
+.badge {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--spacing-4);
+}
+
+.awardHeadline {
+  font-weight: 700;
+  color: var(--foreground);
+  margin-bottom: var(--spacing-2);
+}
+
+.awardSub {
+  color: var(--muted-foreground);
+  margin-bottom: var(--spacing-4);
+  font-size: 0.95rem;
+}
+
+.yearRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-2);
+}
+
+.yearChip {
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--radius-full);
+  background-color: hsl(152 65% 38% / 0.12);
+  color: hsl(152 65% 28%);
+  border: 1px solid hsl(152 65% 38% / 0.3);
+}
+
+.section {
+  margin-bottom: var(--spacing-16);
+}
+
+.talks {
+  list-style: none;
+  padding: 0;
+  margin: var(--spacing-4) 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.talks li {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: var(--spacing-4);
+  color: var(--foreground);
+  padding-bottom: var(--spacing-3);
+  border-bottom: 1px solid var(--border);
+}
+
+.talks span {
+  font-weight: 700;
+  color: var(--secondary);
+}
+
+.principles {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-6);
+  margin-top: var(--spacing-6);
+}
+
+@media (min-width: 900px) {
+  .principles {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.principle {
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--spacing-6);
+}
+
+.principle h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-2);
+}
+
+.principle p {
+  color: var(--muted-foreground);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.cta {
+  text-align: center;
+  padding: var(--spacing-12) var(--spacing-4);
+  margin-bottom: var(--spacing-16);
+  background-color: var(--muted);
+  border-radius: var(--radius-md);
+}
+
+.cta h2 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-6);
+}
+
+.cta a {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}

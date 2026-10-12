@@ -1,0 +1,234 @@
+.container {
+  height: calc(100vh - 48px);
+  display: flex;
+  flex-direction: column;
+  margin: calc(-1 * var(--spacing-6));
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin: calc(-1 * var(--spacing-4));
+    margin-top: calc(-1 * var(--spacing-4) - 60px);
+    height: calc(100vh - 60px);
+  }
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+  padding: var(--spacing-3) var(--spacing-4);
+  background: var(--color-card);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.title {
+  flex: 1;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-foreground);
+  margin: 0;
+}
+
+.toolbarActions {
+  display: flex;
+  gap: var(--spacing-2);
+}
+
+.editorWrapper {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 240px;
+  background: var(--color-card);
+  border-right: 1px solid var(--color-border);
+  padding: var(--spacing-4);
+  overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+}
+
+.sidebarTitle {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--color-muted-foreground);
+  margin: 0 0 var(--spacing-3);
+}
+
+.componentList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.componentButton {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  width: 100%;
+  padding: var(--spacing-2) var(--spacing-3);
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-size: 0.875rem;
+  color: var(--color-foreground);
+  transition: all 0.15s ease;
+}
+
+.componentButton:hover {
+  background: var(--color-muted);
+  border-color: var(--color-primary);
+}
+
+.componentIcon {
+  font-size: 1.25rem;
+}
+
+.componentButton svg {
+  margin-left: auto;
+  color: var(--color-muted-foreground);
+}
+
+.propertiesPanel {
+  margin-top: var(--spacing-6);
+  padding-top: var(--spacing-4);
+  border-top: 1px solid var(--color-border);
+}
+
+.property {
+  margin-bottom: var(--spacing-3);
+}
+
+.property label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-muted-foreground);
+  margin-bottom: var(--spacing-1);
+}
+
+.input {
+  width: 100%;
+  padding: var(--spacing-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-size: 0.875rem;
+}
+
+.input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.select {
+  width: 100%;
+  padding: var(--spacing-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.liveValue {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-2) var(--spacing-3);
+  background: linear-gradient(135deg, hsl(142 70% 45% / 0.1), hsl(142 70% 45% / 0.05));
+  border: 1px solid hsl(142 70% 45% / 0.3);
+  border-radius: var(--radius-md);
+  margin-top: var(--spacing-2);
+}
+
+.liveLabel {
+  font-size: 0.75rem;
+  color: var(--color-muted-foreground);
+}
+
+.liveNumber {
+  font-size: 1rem;
+  font-weight: 600;
+  color: hsl(142 70% 45%);
+}
+
+.connectionStatus {
+  display: flex;
+  align-items: center;
+  margin-right: var(--spacing-2);
+}
+
+.connected {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  padding: var(--spacing-1) var(--spacing-2);
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--color-success);
+  border-radius: var(--radius-md);
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.connected::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--color-success);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.disconnected {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  padding: var(--spacing-1) var(--spacing-2);
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--color-destructive);
+  border-radius: var(--radius-md);
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.canvas {
+  flex: 1;
+  background: var(--color-background);
+}
+
+/* React Flow overrides */
+.canvas :global(.react-flow__node) {
+  font-family: inherit;
+}
+
+.canvas :global(.react-flow__controls) {
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+}
+
+.canvas :global(.react-flow__minimap) {
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+}

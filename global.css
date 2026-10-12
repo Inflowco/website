@@ -1,0 +1,161 @@
+@import url(https://fonts.googleapis.com/css2?family=Manrope:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap);
+:root {
+  /* Content layers */
+  --z-content-low: 10; /* Minor elevated content */
+  --z-content: 20; /* Standard elevated content */
+  --z-content-high: 30; /* Important content that needs prominence */
+
+  /* Navigation layers */
+  --z-nav-low: 100; /* Secondary navigation components */
+  --z-nav: 200; /* Primary navigation bars */
+  --z-nav-sticky: 300; /* Sticky navigation elements */
+
+  /* Overlay layers */
+  --z-overlay: 400;
+
+  --z-spotlight: 1000; /* Tutorial spotlights/guided help */
+
+  /* System layers */
+  --z-critical: 2000; /* Critical system notifications */
+
+  /* spacing */
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.25rem;
+  --spacing-6: 1.5rem;
+  --spacing-7: 1.75rem;
+  --spacing-8: 2rem;
+  --spacing-9: 2.25rem;
+  --spacing-10: 2.5rem;
+  --spacing-11: 2.75rem;
+  --spacing-12: 3rem;
+  --spacing-13: 3.25rem;
+  --spacing-14: 3.5rem;
+  --spacing-15: 3.75rem;
+  --spacing-16: 4rem;
+  --spacing-17: 4.25rem;
+  --spacing-18: 4.5rem;
+  --spacing-19: 4.75rem;
+  --spacing-20: 5rem;
+}
+
+:root {
+  /* Light Mode: "Clean Air" - Crisp, airy, and professional */
+  --background: hsl(204 33% 97%); /* Cool mist white */
+  --foreground: hsl(205 40% 20%); /* Deep industrial slate */
+
+  --surface: hsl(0 0% 100%);
+  --surface-foreground: hsl(205 40% 20%);
+  
+  --sidebar: hsl(204 33% 94%);
+  --sidebar-foreground: hsl(205 40% 20%);
+
+  --card: hsl(0 0% 100%);
+  --card-foreground: hsl(205 40% 20%);
+
+  --popup: hsl(0 0% 100%);
+  --popup-foreground: hsl(205 40% 20%);
+
+  /* Primary: Deep Ocean Blue - Trust, Engineering, Depth */
+  --primary: hsl(202 80% 24%);
+  --primary-foreground: hsl(0 0% 100%);
+
+  /* Secondary: Vitality Green - Nature, Efficiency, Savings */
+  --secondary: hsl(152 65% 38%);
+  --secondary-foreground: hsl(0 0% 100%);
+
+  /* Accent: Electric Teal - Data flow, Monitoring */
+  --accent: hsl(175 70% 40%);
+  --accent-foreground: hsl(0 0% 100%);
+
+  --muted: hsl(204 20% 90%);
+  --muted-foreground: hsl(205 20% 45%);
+
+  --success: hsl(142 76% 36%);
+  --success-foreground: hsl(0 0% 100%);
+
+  --error: hsl(345 80% 50%);
+  --error-foreground: hsl(0 0% 100%);
+
+  --warning: hsl(45 90% 45%);
+  --warning-foreground: hsl(0 0% 100%);
+
+  --info: hsl(200 80% 45%);
+  --info-foreground: hsl(0 0% 100%);
+  --info-hover: hsl(200 80% 35%);
+  --info-active: hsl(200 80% 25%);
+
+  --border: hsl(204 20% 88%);
+
+  /* Font Families */
+  --font-family-base: 'Manrope', system-ui, -apple-system, sans-serif;
+  --font-family-heading: 'Manrope', system-ui, -apple-system, sans-serif;
+  --font-family-monospace: 'Space Mono', monospace;
+  --font-family-cursive: 'Covered By Your Grace', cursive; /* Used sparingly for "human" touches in testimonials */
+
+  /* Border Radius - Engineered Softness */
+  --radius-sm: 0.375rem;
+  --radius: 0.75rem; /* 12px - The core radius */
+  --radius-md: 1rem;
+  --radius-lg: 1.5rem;
+  --radius-full: 9999px;
+
+  /* Shadows - Atmospheric and Diffused */
+  --shadow: 0 1px 2px 0 hsl(205 40% 20% / 0.05);
+  --shadow-md: 0 4px 6px -1px hsl(205 40% 20% / 0.08), 0 2px 4px -1px hsl(205 40% 20% / 0.04);
+  --shadow-lg: 0 10px 15px -3px hsl(205 40% 20% / 0.08), 0 4px 6px -2px hsl(205 40% 20% / 0.04);
+  --shadow-focus: 0 0 0 4px hsl(202 80% 24% / 0.2);
+
+  /* Animation */
+  --animation-duration-fast: 150ms;
+  --animation-duration-normal: 300ms;
+  --animation-duration-slow: 500ms;
+
+  /* Chart Colors - Nature/Industrial Spectrum */
+  --chart-color-1: hsl(202 80% 24%); /* Primary Blue */
+  --chart-color-2: hsl(152 65% 38%); /* Nature Green */
+  --chart-color-3: hsl(175 70% 40%); /* Teal */
+  --chart-color-4: hsl(190 60% 60%); /* Sky */
+  --chart-color-5: hsl(140 40% 70%); /* Sage */
+}
+
+.dark {
+  /* Dark Mode: "Deep Sea/Night Shift" - High contrast monitoring, sleek */
+  --background: hsl(205 45% 8%); /* Very dark blue-black */
+  --foreground: hsl(204 20% 96%);
+
+  --surface: hsl(205 40% 12%); /* Slightly lighter dark blue */
+  --surface-foreground: hsl(204 20% 96%);
+
+  --sidebar: hsl(205 40% 10%);
+  --sidebar-foreground: hsl(204 20% 96%);
+
+  --card: hsl(205 40% 12%);
+  --card-foreground: hsl(204 20% 96%);
+
+  --popup: hsl(205 40% 14%);
+  --popup-foreground: hsl(204 20% 96%);
+
+  --primary: hsl(202 70% 50%); /* Brighter blue for dark mode visibility */
+  --primary-foreground: hsl(0 0% 100%);
+
+  --secondary: hsl(152 60% 45%); /* Luminous green */
+  --secondary-foreground: hsl(0 0% 100%);
+
+  --accent: hsl(175 60% 45%);
+  --accent-foreground: hsl(0 0% 100%);
+
+  --muted: hsl(205 30% 20%);
+  --muted-foreground: hsl(204 15% 70%);
+
+  --border: hsl(205 30% 20%);
+  
+  /* Shadows in dark mode are less about casting shadow, more about glow/depth */
+  --shadow: 0 1px 2px 0 hsl(0 0% 0% / 0.3);
+  --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.4), 0 2px 4px -1px hsl(0 0% 0% / 0.2);
+  --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.5), 0 4px 6px -2px hsl(0 0% 0% / 0.3);
+}

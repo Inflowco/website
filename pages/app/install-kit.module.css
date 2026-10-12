@@ -1,0 +1,268 @@
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-6);
+  gap: var(--spacing-4);
+  flex-wrap: wrap;
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-foreground);
+  margin: 0 0 var(--spacing-1);
+}
+
+.subtitle {
+  font-size: 0.875rem;
+  color: var(--color-muted-foreground);
+  margin: 0;
+}
+
+.statusCard {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-5);
+  margin-bottom: var(--spacing-4);
+}
+
+.statusHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-4);
+}
+
+.statusInfo {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-3);
+}
+
+.statusInfo svg {
+  color: var(--color-primary);
+}
+
+.statusInfo h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-foreground);
+  margin: 0 0 var(--spacing-1);
+}
+
+.statusInfo p {
+  font-size: 0.875rem;
+  color: var(--color-muted-foreground);
+  margin: 0;
+}
+
+.progressBar {
+  height: 8px;
+}
+
+.trackingCard {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-4);
+  margin-bottom: var(--spacing-6);
+}
+
+.trackingHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  margin-bottom: var(--spacing-3);
+}
+
+.trackingHeader svg {
+  color: var(--color-muted-foreground);
+}
+
+.trackingHeader h3 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-foreground);
+  margin: 0;
+}
+
+.trackingDetails {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-4);
+}
+
+.trackingItem {
+  flex: 1;
+  min-width: 150px;
+}
+
+.trackingLabel {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--color-muted-foreground);
+  margin-bottom: var(--spacing-1);
+}
+
+.trackingValue {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-foreground);
+}
+
+.sectionTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-foreground);
+  margin: 0 0 var(--spacing-4);
+}
+
+.stepsSection {
+  margin-bottom: var(--spacing-8);
+}
+
+.stepsList {
+  display: flex;
+  flex-direction: column;
+}
+
+.stepCard {
+  display: flex;
+  gap: var(--spacing-4);
+  padding: var(--spacing-4) 0;
+}
+
+.stepIcon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.completedIcon {
+  color: var(--color-success);
+}
+
+.currentIcon {
+  color: var(--color-primary);
+  fill: color-mix(in srgb, var(--color-primary) 20%, transparent);
+}
+
+.pendingIcon {
+  color: var(--color-muted-foreground);
+}
+
+.stepLine {
+  flex: 1;
+  width: 2px;
+  background: var(--color-border);
+  margin-top: var(--spacing-2);
+  min-height: 20px;
+}
+
+.completed .stepLine {
+  background: var(--color-success);
+}
+
+.stepContent {
+  flex: 1;
+  padding-bottom: var(--spacing-4);
+}
+
+.stepContent h3 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-foreground);
+  margin: 0 0 var(--spacing-1);
+}
+
+.pending .stepContent h3 {
+  color: var(--color-muted-foreground);
+}
+
+.stepContent p {
+  font-size: 0.875rem;
+  color: var(--color-muted-foreground);
+  margin: 0;
+}
+
+.stepActions {
+  display: flex;
+  gap: var(--spacing-2);
+  margin-top: var(--spacing-3);
+}
+
+.kitContents {
+  margin-bottom: var(--spacing-8);
+}
+
+.contentsGrid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.contentItem {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  padding: var(--spacing-3);
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.contentQty {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  min-width: 30px;
+}
+
+.contentName {
+  flex: 1;
+  font-size: 0.875rem;
+  color: var(--color-foreground);
+}
+
+.helpSection {
+  margin-bottom: var(--spacing-8);
+}
+
+.helpOptions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-4);
+}
+
+.helpCard {
+  text-align: center;
+  padding: var(--spacing-5);
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.helpCard svg {
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-3);
+}
+
+.helpCard h3 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-foreground);
+  margin: 0 0 var(--spacing-1);
+}
+
+.helpCard p {
+  font-size: 0.75rem;
+  color: var(--color-muted-foreground);
+  margin: 0 0 var(--spacing-3);
+}
