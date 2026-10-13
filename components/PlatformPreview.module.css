@@ -67,7 +67,13 @@
 
 @media (min-width: 720px) {
   .tiles {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1000px) {
+  .tiles {
+    grid-template-columns: repeat(5, 1fr);
   }
 }
 
@@ -75,7 +81,7 @@
   background-color: hsl(205 40% 20% / 0.6);
   border-radius: var(--radius-sm);
   padding: var(--spacing-3) var(--spacing-4);
-  border-left: 3px solid hsl(152 65% 45%);
+  border-left: 3px solid #77bc45;
 }
 
 .tile_warn {
@@ -126,6 +132,12 @@
 @media (min-width: 720px) {
   .charts {
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1000px) {
+  .charts {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -207,4 +219,149 @@
 .insightIcon {
   flex-shrink: 0;
   margin-top: 2px;
+}
+
+.log {
+  margin-top: var(--spacing-5);
+  padding-top: var(--spacing-5);
+  border-top: 1px solid hsl(205 30% 28%);
+}
+
+.logHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--spacing-4);
+  flex-wrap: wrap;
+  margin-bottom: var(--spacing-4);
+}
+
+.logTitle {
+  font-weight: 700;
+  color: white;
+  margin-bottom: 0.2rem;
+}
+
+.logActions {
+  display: flex;
+  gap: var(--spacing-2);
+  flex-wrap: wrap;
+}
+
+.logBtn,
+.repairBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: hsl(205 40% 20%);
+  color: hsl(204 20% 85%);
+  border: 1px solid hsl(205 30% 30%);
+  border-radius: var(--radius-full);
+  padding: 0.35rem 0.85rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  white-space: nowrap;
+  transition: background var(--animation-duration-fast), color var(--animation-duration-fast);
+}
+
+.logBtn:hover,
+.repairBtn:hover {
+  background: hsl(205 40% 26%);
+  color: white;
+}
+
+.repairBtn {
+  padding: 0.25rem 0.7rem;
+  font-size: 0.75rem;
+}
+
+.logTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  color: hsl(204 20% 85%);
+}
+
+.logTable th {
+  text-align: left;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: hsl(204 20% 60%);
+  font-weight: 600;
+  padding: 0.35rem 0.5rem;
+  border-bottom: 1px solid hsl(205 30% 28%);
+}
+
+.logTable td {
+  padding: 0.5rem 0.5rem;
+  border-bottom: 1px solid hsl(205 30% 22%);
+  vertical-align: middle;
+}
+
+.logTag {
+  font-family: var(--font-family-monospace);
+  color: white;
+}
+
+.statusOpen,
+.statusDone {
+  font-weight: 700;
+}
+
+.statusOpen {
+  color: hsl(38 90% 62%);
+}
+
+.statusDone {
+  color: hsl(152 65% 60%);
+}
+
+.logWhen {
+  color: hsl(204 20% 60%);
+  font-size: 0.78rem;
+}
+
+.logNote {
+  margin-top: var(--spacing-3);
+  font-size: 0.85rem;
+  color: hsl(204 20% 80%);
+}
+
+.logNote a {
+  color: hsl(152 65% 60%);
+  font-weight: 600;
+}
+
+@media (max-width: 719px) {
+  .logTable th:nth-child(2),
+  .logTable td:nth-child(2) {
+    display: none;
+  }
+}
+
+.brandChip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 0.35rem;
+  padding: 0.2rem 0.6rem 0.2rem 0.3rem;
+  border-radius: var(--radius-full);
+  background: hsl(205 40% 20% / 0.7);
+  border: 1px solid hsl(205 30% 30%);
+}
+
+.brandChip img {
+  height: 16px;
+  width: auto;
+}
+
+.brandChip span {
+  color: hsl(204 20% 70%);
+  font-weight: 500;
 }

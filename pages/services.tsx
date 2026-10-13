@@ -8,15 +8,17 @@ import {
 } from "../components/Accordion";
 import { Button } from "../components/Button";
 import { ArrowRight, Package } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import styles from "./services.module.css";
 
 export default function ServicesPage() {
+  const { hash } = useLocation();
+  const openItem = hash ? hash.slice(1) : undefined;
   return (
     <>
       <Helmet>
         <title>Compressed Air Studies | Inflow Corp.</title>
-        <meta name="description" content="Compressed air studies, ultrasonic leak surveys, system design and Xcel Energy rebate engineering from an independent firm in Saint Paul, Minnesota." />
+        <meta name="description" content="Compressed air studies, ultrasonic leak surveys, system design and utility rebate engineering from an independent firm in Saint Paul, Minnesota." />
       </Helmet>
 
       <div className={styles.pageHeader}>
@@ -27,10 +29,10 @@ export default function ServicesPage() {
             Two weeks of power, pressure and flow logging behind every number.
           </p>
           <div className={styles.fundingNote} id="funding">
-            <strong>Most studies in Xcel Energy territory are paid by the utility.</strong>
-            Inflow is a listed study provider for Xcel Energy's Minnesota compressed air and fluid system
-            optimization programs and handles the application, the study and the measurement and verification.
-            Send the compressor list and we will tell you what funding applies.
+            <strong>The electric utility in your area may pay some or all of the cost of a study, a report or a project.</strong>
+            Inflow is a listed study provider for compressed air and fluid system optimization programs and
+            handles the application, the study and the measurement and verification.
+            Send us your electric utility and we will find out what funding applies.
           </div>
         </div>
       </div>
@@ -39,7 +41,7 @@ export default function ServicesPage() {
         <div className={styles.contentGrid}>
           {/* Main Services List */}
           <div className={styles.servicesList}>
-            <Accordion type="single" collapsible className={styles.accordion}>
+            <Accordion type="single" collapsible className={styles.accordion} defaultValue={openItem}>
               <AccordionItem value="leak-detection">
                 <AccordionTrigger className={styles.trigger}>Leak Detection</AccordionTrigger>
                 <AccordionContent>
@@ -68,7 +70,7 @@ export default function ServicesPage() {
                     <h4>What We Monitor:</h4>
                     <ul>
                       <li><strong>Flow:</strong> Understand your actual demand profile.</li>
-                      <li><strong>Power:</strong> Measure true energy consumption.</li>
+                      <li><strong>Power:</strong> Measure energy consumption.</li>
                       <li><strong>Pressure:</strong> Identify pressure drops and instability.</li>
                     </ul>
                   </div>
@@ -87,7 +89,7 @@ export default function ServicesPage() {
                       <li>System efficiency metrics (kW/100 cfm)</li>
                       <li>Cost of operation analysis</li>
                       <li>Load profile visualization</li>
-                      <li>Actionable recommendations with ROI calculations</li>
+                      <li>Actionable recommendations with simple payback and ROI calculations</li>
                     </ul>
                   </div>
                 </AccordionContent>
@@ -107,6 +109,29 @@ export default function ServicesPage() {
                       <li>Storage sizing and location</li>
                       <li>Air quality treatment selection (dryers/filters)</li>
                     </ul>
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="bid-spec" id="bid-spec">
+                <AccordionTrigger className={styles.trigger}>Bid Specification and Implementation</AccordionTrigger>
+                <AccordionContent>
+                  <div className={styles.serviceDetail}>
+                    <p>
+                      When the study says replace or add equipment, we write the specification the vendors bid against, so every quote describes the same system and the plant is not buying what the dealer has on the floor. Then we stay through the install and prove the result with the same loggers that found it.
+                    </p>
+                    <h4>What is included:</h4>
+                    <ul>
+                      <li>Performance specification with the options priced out: duty, pressure band, control method, storage, treatment, piping tie ins</li>
+                      <li>Bid package to the vendors you pick, and a side by side review of the quotes on measured load, not catalog capacity</li>
+                      <li>Utility pre approval filed before the order is placed, so the rebate is not lost</li>
+                      <li>Submittal review, installation review and startup set points</li>
+                      <li>Post install logging and the measurement and verification report your utility needs</li>
+                    </ul>
+                    <p>
+                      Quoted as a fixed fee from the study, or on its own for a project you have already scoped.
+                      <br />
+                      <Link to="/contact?system=bid-spec" className={styles.inlineLink}>Request a bid specification quote</Link>
+                    </p>
                   </div>
                 </AccordionContent>
               </AccordionItem>

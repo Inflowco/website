@@ -21,22 +21,16 @@ const RESULTS: Row[] = [
     package: "$31,400 per year, 15%",
   },
   {
-    plant: "Wastewater treatment plant",
-    system: "Two air systems, $496,000 per year",
-    finding: "One compressor idling 76% of the time; supply and pressure control measures",
-    package: "$79,800 per year, 16% (draft)",
-  },
-  {
-    plant: "Window manufacturer",
+    plant: "Building materials and assembled components plant",
     system: "High pressure system, 400 HP",
     finding: "Swing compressor measured at 0 to 2,570 CFM; VSD replacement engineered and rebated",
     package: "$400,000 project, 2.3 year payback",
   },
   {
-    plant: "Medical device plant",
+    plant: "Metal fabrication plant, Minnesota",
     system: "Argon, micro bulk tank",
-    finding: "Idle draw with the plant shut down was 80% of average draw; four small leaks and open whips",
-    package: "About $8,700 per year on a $4,700 review",
+    finding: "Idle draw with the plant shut down was about two thirds of average draw; several small leaks and open whips",
+    package: "About $15,000 per year on a $4,700 review",
   },
 ];
 
@@ -90,9 +84,9 @@ export default function CaseStudiesPage() {
           <div className={styles.card}>
             <h3>What a study costs you</h3>
             <p>
-              In Xcel Energy's Minnesota territory most compressed air studies are pre approved and paid by
-              the utility. Elsewhere the fee is scaled to installed horsepower and is usually recovered in
-              the first year of the lowest cost measure.
+              The electric utility in your area may pay some or all of the cost of the study, the report or
+              the project. Where it does not, the fee is scaled to installed horsepower and is usually
+              recovered in the first year of the lowest cost measure.
             </p>
           </div>
           <div className={styles.card}>

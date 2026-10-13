@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet";
 import { Link, useSearchParams } from "react-router-dom";
-import { Mail, Phone, MapPin, Clock, CheckCircle2 } from "lucide-react";
+import { Mail, MapPin, Clock, CheckCircle2 } from "lucide-react";
 import { Input } from "../components/Input";
 import { Textarea } from "../components/Textarea";
 import { Button } from "../components/Button";
@@ -13,6 +13,7 @@ const SYSTEMS: { value: string; label: string }[] = [
   { value: "argon", label: "Argon" },
   { value: "nitrogen", label: "Nitrogen" },
   { value: "fluid", label: "Blower, vacuum, pump or fan" },
+  { value: "bid-spec", label: "Bid specification and implementation" },
   { value: "platform", label: "Monitoring platform (compressedair.ai)" },
   { value: "other", label: "Something else" },
 ];
@@ -111,7 +112,7 @@ export default function ContactPage() {
                     <p>
                       {FORMSPREE_ID
                         ? `${CONTACT.name} replies within one business day.`
-                        : `If it did not, email ${CONTACT.email} or call ${CONTACT.phone}.`}
+                        : `If it did not, email ${CONTACT.email}.`}
                     </p>
                   </div>
                 </div>
@@ -187,13 +188,6 @@ export default function ContactPage() {
                   </div>
                 </div>
                 <div className={styles.infoItem}>
-                  <Phone className={styles.infoIcon} />
-                  <div>
-                    <strong>Phone</strong>
-                    <a href={CONTACT.phoneHref}>{CONTACT.phone}</a>
-                  </div>
-                </div>
-                <div className={styles.infoItem}>
                   <MapPin className={styles.infoIcon} />
                   <div>
                     <strong>Mail</strong>
@@ -211,11 +205,11 @@ export default function ContactPage() {
             </div>
 
             <div className={styles.fundingCard}>
-              <h3>Xcel Energy study funding</h3>
+              <h3>Utility study funding</h3>
               <p>
-                If your plant is in Xcel Energy's Minnesota territory, a compressed air study is usually
-                pre approved and paid by the utility. Inflow is a listed study provider and handles the
-                application. Send the compressor list and we will tell you what applies.
+                The electric utility in your area may pay some or all of the cost of a study, a report or a
+                project. Inflow is a listed study provider and handles the application. Send us your electric
+                utility and we will find out what funding applies.
               </p>
               <Link to="/services#funding" className={styles.fundingLink}>How the funding works</Link>
             </div>

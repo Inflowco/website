@@ -44,7 +44,7 @@ export default function AboutPage() {
             <p className={styles.textBody}>
               Inflow is a listed study provider for Xcel Energy's Minnesota commercial and industrial
               programs. Since 2024 the firm has completed studies for more than forty industrial plants
-              across medical device, window and door, food and beverage, semiconductor, paper, consumer
+              across medical device, building materials, food and beverage, semiconductor, paper, consumer
               products, water and wastewater, and university campuses.
             </p>
             <dl className={styles.facts}>
@@ -56,6 +56,10 @@ export default function AboutPage() {
             </dl>
           </div>
           <aside className={styles.awardCard}>
+            <div className={styles.utilityRow}>
+              <img src={asset("xcel-energy-logo.svg")} alt="Xcel Energy" className={styles.utilityLogo} />
+              <span className={styles.utilityLabel}>Listed study provider, Minnesota</span>
+            </div>
             <img src={asset("xcel-award-badge.png")} alt="Xcel Energy Partner Award, 2015 to 2026" className={styles.badge} />
             <p className={styles.awardHeadline}>{AWARD_LINE}.</p>
             <p className={styles.awardSub}>Won every year since the award began. Compressed Air category winner, 2025 and 2026.</p>

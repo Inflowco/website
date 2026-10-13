@@ -1,8 +1,28 @@
 .pageHeader {
+  position: relative;
+  overflow: hidden;
   background-color: var(--surface);
   padding: var(--spacing-12) 0;
   border-bottom: 1px solid var(--border);
   margin-bottom: var(--spacing-12);
+}
+
+.pageHeader::after {
+  content: "";
+  position: absolute;
+  right: -60px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 340px;
+  height: 400px;
+  background: url(/inflow-mark.png) no-repeat center / contain;
+  opacity: 0.07;
+  pointer-events: none;
+}
+
+.pageHeader .container {
+  position: relative;
+  z-index: 1;
 }
 
 .container {
@@ -180,4 +200,18 @@
 .fundingNote strong {
   display: block;
   margin-bottom: var(--spacing-1);
+}
+
+.inlineLink {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.inlineLink {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }

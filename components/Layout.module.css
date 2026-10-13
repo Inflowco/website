@@ -146,7 +146,6 @@
 /* Footer */
 .footer {
   background-color: var(--surface);
-  border-top: 1px solid var(--border);
   padding: var(--spacing-12) 0 var(--spacing-6);
   margin-top: auto;
 }
@@ -257,4 +256,40 @@
   color: var(--foreground);
   font-weight: 500;
   margin-bottom: var(--spacing-2);
+}
+
+/* Brand */
+.brandBand {
+  height: 6px;
+  background: linear-gradient(90deg, #77bc45 0%, #62b7a5 50%, #5fb8d6 100%);
+}
+
+.tagline {
+  font-family: var(--font-family-heading);
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--foreground);
+  margin: calc(-1 * var(--spacing-2)) 0 0;
+}
+
+.footer {
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::after {
+  content: "";
+  position: absolute;
+  right: -90px;
+  bottom: -120px;
+  width: 420px;
+  height: 480px;
+  background: url(/inflow-mark.png) no-repeat center / contain;
+  opacity: 0.06;
+  pointer-events: none;
+}
+
+.footer .container {
+  position: relative;
+  z-index: 1;
 }

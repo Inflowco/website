@@ -39,21 +39,21 @@ export default function IndustrialGasPage() {
           <div>
             <h2 className={styles.sectionTitle}>The idle draw is the story</h2>
             <p className={styles.textBody}>
-              At the first plant Inflow measured, four small leaks, uncoupled quick disconnect whips and
+              At the first plant Inflow measured, several small leaks, uncoupled quick disconnect whips and
               tank boil off made up the whole idle draw. No single big leak, and none was needed to explain
               the bill.
             </p>
             <p className={styles.textBody}>
               When points of use are failing moisture or purity tests, the review traces where the problem
               enters. If your nitrogen is made on site, the generator's compressor is a compressed air load
-              and Xcel Energy study funding can apply.
+              and the electric utility in your area may pay some or all of the study cost.
             </p>
           </div>
           <div className={styles.callout}>
-            <div className={styles.calloutValue}>80%</div>
+            <div className={styles.calloutValue}>2 of 3</div>
             <p className={styles.calloutText}>
-              of one medical device plant's argon purchases were flowing while the plant was shut down.
-              Review fee $4,700, recoverable about $8,700 a year.
+              cubic feet of one Minnesota fabrication plant's argon were flowing while the plant was shut
+              down. Review fee $4,700, recoverable about $15,000 a year.
             </p>
           </div>
         </section>

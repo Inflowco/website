@@ -99,13 +99,18 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
         )}
       </header>
 
+      <div className={styles.brandBand} aria-hidden="true" />
+
       <main className={styles.main}>{children}</main>
+
+      <div className={styles.brandBand} aria-hidden="true" />
 
       <footer className={styles.footer}>
         <div className={styles.container}>
           <div className={styles.footerGrid}>
             <div className={styles.footerBrand}>
               <img src={logo} alt="Inflow" className={styles.logoImageFooter} />
+              <p className={styles.tagline}>Compressed Air Consultants, since 2012</p>
               <p className={styles.footerDesc}>
                 Independent engineering for compressed air, argon and nitrogen
                 systems. We measure it, we do not sell it.
@@ -113,7 +118,6 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
               <p className={styles.footerContact}>
                 {CONTACT.name}<br />
                 <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a><br />
-                <a href={CONTACT.phoneHref}>{CONTACT.phone}</a><br />
                 {CONTACT.company}, {CONTACT.address1}, {CONTACT.address2}
               </p>
             </div>
@@ -124,7 +128,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
                 <li><Link to="/services">Compressed Air Studies</Link></li>
                 <li><Link to="/industrial-gas">Argon and Nitrogen Reviews</Link></li>
                 <li><Link to="/services#fluid-systems">Fluid Systems</Link></li>
-                <li><Link to="/services#funding">Xcel Energy study funding</Link></li>
+                <li><Link to="/services#funding">Utility study funding</Link></li>
               </ul>
             </div>
 

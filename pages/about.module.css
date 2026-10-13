@@ -6,10 +6,30 @@
 }
 
 .pageHeader {
+  position: relative;
+  overflow: hidden;
   background-color: var(--surface);
   padding: var(--spacing-12) 0;
   border-bottom: 1px solid var(--border);
   margin-bottom: var(--spacing-12);
+}
+
+.pageHeader::after {
+  content: "";
+  position: absolute;
+  right: -60px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 340px;
+  height: 400px;
+  background: url(/inflow-mark.png) no-repeat center / contain;
+  opacity: 0.07;
+  pointer-events: none;
+}
+
+.pageHeader .container {
+  position: relative;
+  z-index: 1;
 }
 
 .eyebrow {
@@ -108,6 +128,29 @@
   border-radius: var(--radius);
   padding: var(--spacing-6);
   box-shadow: var(--shadow);
+}
+
+.utilityRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-3);
+  flex-wrap: wrap;
+  padding-bottom: var(--spacing-4);
+  margin-bottom: var(--spacing-4);
+  border-bottom: 1px solid var(--border);
+}
+
+.utilityLogo {
+  width: 170px;
+  height: auto;
+  display: block;
+}
+
+.utilityLabel {
+  font-size: 0.8rem;
+  color: var(--muted-foreground);
+  font-weight: 600;
 }
 
 .badge {

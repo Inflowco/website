@@ -61,6 +61,9 @@
   --popup-foreground: hsl(205 40% 20%);
 
   /* Primary: Deep Ocean Blue - Trust, Engineering, Depth */
+  --brand-green: #77bc45;
+  --brand-blue: #5fb8d6;
+  --brand-band: linear-gradient(90deg, #77bc45 0%, #62b7a5 50%, #5fb8d6 100%);
   --primary: hsl(202 80% 24%);
   --primary-foreground: hsl(0 0% 100%);
 

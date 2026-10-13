@@ -6,6 +6,8 @@
 }
 
 .hero {
+  position: relative;
+  overflow: hidden;
   padding: var(--spacing-20) 0;
   background:
     radial-gradient(60% 80% at 100% 0%, hsl(175 70% 40% / 0.35), transparent 60%),
@@ -67,7 +69,7 @@
 }
 
 .highlight {
-  color: hsl(152 65% 70%);
+  color: hsl(95 60% 66%);
 }
 
 .heroSubtitle {
@@ -297,4 +299,22 @@
   gap: var(--spacing-4);
   justify-content: center;
   flex-wrap: wrap;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  left: -160px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 620px;
+  height: 720px;
+  background: url(/inflow-mark.png) no-repeat center / contain;
+  opacity: 0.08;
+  pointer-events: none;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1;
 }

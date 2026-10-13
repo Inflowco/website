@@ -21,8 +21,6 @@ export const CONTACT = {
   name: "Peter Vinck",
   title: "Senior Engineering Consultant",
   email: "peter.vinck@inflowco.com",
-  phone: "612-845-2589",
-  phoneHref: "tel:+16128452589",
   company: "Inflow Corp.",
   address1: "PO Box 14180",
   address2: "Saint Paul, MN 55114",

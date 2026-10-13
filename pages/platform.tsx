@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import { Activity, Bell, Workflow, MessageSquare, Package, ArrowRight, CheckCircle2 } from "lucide-react";
+import { Activity, Bell, Workflow, MessageSquare, Package, ArrowRight, CheckCircle2, ClipboardCheck, LogIn, Upload } from "lucide-react";
 import { Button } from "../components/Button";
 import { PlatformPreview } from "../components/PlatformPreview";
 import { asset } from "../helpers/site";
@@ -33,8 +33,9 @@ export default function PlatformPage() {
             </h1>
             <p className={styles.heroSubtitle}>
               A self install monitoring kit and dashboard built by the people who do the studies. Flow,
-              power and pressure together, a block diagram of your plant, and analysis written the way an
-              engineer would write it. Not a vendor's portal for one compressor.
+              power, pressure and dew point together, a block diagram of your plant, your leak and repair
+              log, and analysis written the way an engineer would write it. Not a vendor's portal for one
+              compressor.
             </p>
             <div className={styles.heroActions}>
               <Button asChild size="lg" variant="primary">
@@ -42,6 +43,9 @@ export default function PlatformPage() {
               </Button>
               <Button asChild size="lg" variant="outline" className={styles.heroSecondaryBtn}>
                 <a href="#preview">See the preview</a>
+              </Button>
+              <Button asChild size="lg" variant="outline" className={styles.heroSecondaryBtn}>
+                <Link to="/contact?system=platform"><LogIn size={18} /> Plant login, pilots only</Link>
               </Button>
             </div>
             <p className={styles.status}>
@@ -59,14 +63,15 @@ export default function PlatformPage() {
             <p className={styles.eyebrow}>Preview</p>
             <h2 className={styles.sectionTitle}>Try the dashboard</h2>
             <p className={styles.sectionSubtitle}>
-              This is a simulation, not a live plant. Push the system through a shift start or a slow leak
-              and watch what the platform flags.
+              This is a simulation, not a live plant. Push the system through a shift start, a slow leak or
+              a dryer losing ground, mark a repair in the log, and watch what the platform flags.
             </p>
           </div>
           <PlatformPreview />
           <p className={styles.previewNote}>
             The numbers mirror a real study: 445 ACFM baseline, 0.235 kW per ACFM, 61 ACFM of weekend idle
-            flow after leak repair. The live product reads your meters instead.
+            flow after leak repair, 38 F dew point off a refrigerated dryer. The live product reads your meters
+            and your own leak log instead.
           </p>
         </div>
       </section>
@@ -140,6 +145,21 @@ export default function PlatformPage() {
               title="Ask the engineer"
               desc="Questions about your readings, your standards and your options, answered against your own data and Inflow's study library."
             />
+            <FeatureCard
+              icon={<LogIn />}
+              title="Plant login portal"
+              desc="One login per plant, roles for maintenance, the controller and your utility reviewer. Each sees the same data and their own view of it."
+            />
+            <FeatureCard
+              icon={<Upload />}
+              title="Upload surveys and demand side lists"
+              desc="Bring in the leak survey, the demand side inventory and the study workbook. Tags, locations, SCFM and photos land in one list next to the live readings."
+            />
+            <FeatureCard
+              icon={<ClipboardCheck />}
+              title="Repair completion tracking"
+              desc="Mark each leak or demand side item repaired, with a date and who did it. The platform checks the idle flow against the log and tells you what the repairs actually bought."
+            />
           </div>
         </div>
       </section>
@@ -151,8 +171,8 @@ export default function PlatformPage() {
             <h2>Be one of the first plants on it</h2>
             <p>
               Pilot plants get the kit at cost, Inflow on the install, and a say in what the dashboard
-              shows. A study is the best way to start, and in Xcel Energy territory the utility usually pays
-              for it.
+              shows. A study is the best way to start, and the electric utility in your area may pay some or all
+              of the cost.
             </p>
             <div className={styles.ctaActions}>
               <Button asChild size="lg" variant="primary">

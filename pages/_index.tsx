@@ -25,14 +25,19 @@ export default function LandingPage() {
           <div className={styles.heroContent}>
             <p className={styles.kicker}>Independent engineering, Saint Paul, Minnesota</p>
             <h1 className={styles.heroTitle}>
-              Measure the system. Fix what pays.
+              <span className={styles.lineRed}>Measure the system.</span>
+              <Link to="/contact" className={styles.tinyLink}>Request a study</Link>
               <br />
-              <span className={styles.highlight}>Prove it with data.</span>
+              <span className={styles.lineAmber}>Fix what pays back.</span>
+              <Link to="/services#bid-spec" className={styles.tinyLink}>Bid specification and implementation</Link>
+              <br />
+              <span className={styles.highlight}>Continuous monitoring.</span>
+              <Link to="/platform" className={styles.tinyLink}>The monitoring platform</Link>
             </h1>
             <p className={styles.heroSubtitle}>
-              Inflow maps compressed air, argon and nitrogen systems, logs them long enough to catch what
-              averages hide, and hands you a ranked list of fixes with the dollars on each one. We do not
-              sell equipment or gas.
+              Inflow maps your compressed air system, logs it long enough to catch what averages hide,
+              and hands you a ranked list of fixes with the dollars on each one. We do not sell
+              equipment.
             </p>
             <div className={styles.heroActions}>
               <Button asChild size="lg" variant="primary">
@@ -43,8 +48,8 @@ export default function LandingPage() {
               </Button>
             </div>
             <p className={styles.heroNote}>
-              Most compressed air studies in Xcel Energy territory are funded by the utility. Inflow is a
-              listed study provider and handles the paperwork.
+              The electric utility in your area may pay some or all of the cost of a study, a report or a
+              project. Inflow is a listed study provider and handles the paperwork.
             </p>
           </div>
         </div>
@@ -96,7 +101,7 @@ export default function LandingPage() {
                 "Custom rebate engineering and measurement and verification",
                 "Vendor neutral specifications and bid review",
               ]}
-              note="Xcel Energy study funding available"
+              note="Utility study funding may apply"
               link="/services"
               linkText="Compressed air services"
             />
@@ -232,8 +237,8 @@ export default function LandingPage() {
           <div className={styles.statGrid}>
             <StatCard value="43%" label="of air energy cost" text="Coatings plant, three compressors averaging 59 ACFM against 845 installed. $10,300 per year." />
             <StatCard value="$31,400" label="per year, 15%" text="University campus loop. Leak repair basis from logger data, supply consolidated on the efficient machine." />
-            <StatCard value="2.3 yr" label="payback on $400,000" text="Window manufacturer, 400 HP system. Swing compressor measured at 0 to 2,570 CFM, VSD replacement engineered and rebated." />
-            <StatCard value="80%" label="of argon bought while shut down" text="Medical device plant. Four small leaks and open whips. About $8,700 per year on a $4,700 review." />
+            <StatCard value="2.3 yr" label="payback on $400,000" text="Building materials and assembled components plant, 400 HP system. Swing compressor measured at 0 to 2,570 CFM, VSD replacement engineered and rebated." />
+            <StatCard value="2 of 3" label="cubic feet of argon bought while shut down" text="Metal fabrication plant. Several small leaks and open whips. About $15,000 per year on a $4,700 review." />
           </div>
           <div className={styles.centerAction}>
             <Button asChild variant="secondary">
@@ -253,8 +258,8 @@ export default function LandingPage() {
               <p className={styles.textBody}>
                 Inflow Corp. is an independent consultancy in Saint Paul, Minnesota. Our fee is the only
                 thing we are paid, so the recommendation is the one that is right for your plant. We are a
-                listed study provider for Xcel Energy's Minnesota commercial and industrial programs and
-                have won its Energy Efficiency Partner Award every year since the award began.
+                listed utility study provider in Minnesota and have won Xcel Energy's Energy Efficiency
+                Partner Award every year since the award began.
               </p>
               <Button asChild variant="outline">
                 <Link to="/about">About Peter Vinck and Inflow <ArrowRight size={16} /></Link>
