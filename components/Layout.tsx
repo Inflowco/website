@@ -16,7 +16,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
   const navLinks = [
     { name: "Compressed Air", path: "/services" },
     { name: "Argon and Nitrogen", path: "/industrial-gas" },
-    { name: "Platform", path: "/platform" },
+    { name: "Monitoring", path: "/platform" },
     { name: "Results", path: "/case-studies" },
     { name: "About", path: "/about" },
     { name: "Contact", path: "/contact" },

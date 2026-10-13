@@ -349,16 +349,16 @@
   font-size: 0.78rem;
   font-weight: 700;
   color: white;
-  margin-bottom: 0.35rem;
-  padding: 0.2rem 0.6rem 0.2rem 0.3rem;
-  border-radius: var(--radius-full);
-  background: hsl(205 40% 20% / 0.7);
-  border: 1px solid hsl(205 30% 30%);
+  margin-bottom: 0.45rem;
+  padding: 0;
+  background: none;
+  border: none;
 }
 
 .brandChip img {
-  height: 16px;
+  height: 36px;
   width: auto;
+  display: block;
 }
 
 .brandChip span {

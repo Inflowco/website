@@ -30,9 +30,22 @@
 .badgeRow {
   display: flex;
   justify-content: center;
-  gap: var(--spacing-2);
+  align-items: center;
+  gap: var(--spacing-4);
   flex-wrap: wrap;
-  margin-bottom: var(--spacing-5);
+  margin-bottom: var(--spacing-6);
+}
+
+.brandLogo {
+  height: 72px;
+  width: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .brandLogo {
+    height: 54px;
+  }
 }
 
 .badge {

@@ -23,7 +23,7 @@ export default function PlatformPage() {
         <div className={styles.container}>
           <div className={styles.heroContent}>
             <div className={styles.badgeRow}>
-              <span className={styles.badge}>compressedair.ai, an Inflow platform</span>
+              <img src={asset("compressedair-ai-logo-white.png")} alt="inflow, www.compressedair.ai" className={styles.brandLogo} />
               <span className={styles.soon}>Coming soon</span>
             </div>
             <h1 className={styles.heroTitle}>

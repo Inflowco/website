@@ -152,7 +152,7 @@ export function PlatformPreview() {
     <div className={styles.dash} id="preview">
       <div className={styles.head}>
         <div>
-          <div className={styles.brandChip}><img src={asset("inflow-mark.png")} alt="" /> compressedair.ai <span>by Inflow</span></div>
+          <div className={styles.brandChip}><img src={asset("compressedair-ai-logo-white.png")} alt="inflow, www.compressedair.ai" /></div>
           <div className={styles.plant}>Main plant header</div>
           <div className={styles.meta}>Simulated data for the preview. Updated {secondsAgo} s ago.</div>
         </div>
