@@ -24,6 +24,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
 
   const logo = asset("inflow-logo.png");
   const ogImage = SITE_URL ? SITE_URL + asset("og-image.jpg") : undefined;
+  const canonical = SITE_URL ? SITE_URL + (location.pathname === "/" ? "/" : location.pathname.replace(/\/$/, "")) : undefined;
   const year = new Date().getFullYear();
 
   return (
@@ -31,6 +32,8 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
       <Helmet>
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Inflow Corp." />
+        {canonical && <link rel="canonical" href={canonical} />}
+        {canonical && <meta property="og:url" content={canonical} />}
         {ogImage && <meta property="og:image" content={ogImage} />}
         {ogImage && <meta name="twitter:card" content="summary_large_image" />}
       </Helmet>
