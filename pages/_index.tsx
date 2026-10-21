@@ -12,7 +12,7 @@ export default function LandingPage() {
   return (
     <>
       <Helmet>
-        <title>Inflow Corp. | Compressed Air and Industrial Gas Engineering</title>
+        <title>Inflow Co. | Compressed Air and Industrial Gas Engineering</title>
         <meta
           name="description"
           content="Independent engineering for compressed air, argon and nitrogen systems in Saint Paul, Minnesota. Studies, leak surveys, utility rebate engineering and the compressedair.ai monitoring platform."
@@ -256,7 +256,7 @@ export default function LandingPage() {
               <p className={styles.eyebrow}>About Inflow</p>
               <h2 className={styles.sectionTitle}>An engineering firm, not an equipment dealer</h2>
               <p className={styles.textBody}>
-                Inflow Corp. is an independent consultancy in Saint Paul, Minnesota. Our fee is the only
+                Inflow Co. is an independent consultancy in Saint Paul, Minnesota. Our fee is the only
                 thing we are paid, so the recommendation is the one that is right for your plant. We are a
                 listed utility study provider in Minnesota and have won Xcel Energy's Energy Efficiency
                 Partner Award every year since the award began.

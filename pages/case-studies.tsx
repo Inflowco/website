@@ -38,7 +38,7 @@ export default function CaseStudiesPage() {
   return (
     <>
       <Helmet>
-        <title>Results | Inflow Corp.</title>
+        <title>Results | Inflow Co.</title>
         <meta name="description" content="Representative outcomes from recent Inflow compressed air and industrial gas studies, stated the way the reports state them." />
       </Helmet>
 

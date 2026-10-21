@@ -10,7 +10,7 @@ export default function IndustrialGasPage() {
   return (
     <>
       <Helmet>
-        <title>Argon and Nitrogen Reviews | Inflow Corp.</title>
+        <title>Argon and Nitrogen Reviews | Inflow Co.</title>
         <meta
           name="description"
           content="Argon and nitrogen system reviews: system map, twelve month cost baseline, idle draw measured over a shutdown, leaks tagged at your delivered price, ranked fixes. Pays back out of the gas bill."

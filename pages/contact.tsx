@@ -84,7 +84,7 @@ export default function ContactPage() {
   return (
     <>
       <Helmet>
-        <title>Contact | Inflow Corp.</title>
+        <title>Contact | Inflow Co.</title>
         <meta name="description" content="Tell Inflow about your compressed air, argon or nitrogen system. Peter Vinck replies within one business day." />
       </Helmet>
 

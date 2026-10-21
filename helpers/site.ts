@@ -21,7 +21,7 @@ export const CONTACT = {
   name: "Peter Vinck",
   title: "Senior Engineering Consultant",
   email: "peter.vinck@inflowco.com",
-  company: "Inflow Corp.",
+  company: "Inflow Co.",
   address1: "PO Box 14180",
   address2: "Saint Paul, MN 55114",
 };

@@ -31,7 +31,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
     <div className={styles.layout}>
       <Helmet>
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Inflow Corp." />
+        <meta property="og:site_name" content="Inflow Co." />
         {canonical && <link rel="canonical" href={canonical} />}
         {canonical && <meta property="og:url" content={canonical} />}
         {ogImage && <meta property="og:image" content={ogImage} />}

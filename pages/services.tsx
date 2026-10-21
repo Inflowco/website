@@ -17,7 +17,7 @@ export default function ServicesPage() {
   return (
     <>
       <Helmet>
-        <title>Compressed Air Studies | Inflow Corp.</title>
+        <title>Compressed Air Studies | Inflow Co.</title>
         <meta name="description" content="Compressed air studies, ultrasonic leak surveys, system design and utility rebate engineering from an independent firm in Saint Paul, Minnesota." />
       </Helmet>
 

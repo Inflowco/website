@@ -12,10 +12,10 @@ export default function AboutPage() {
   return (
     <>
       <Helmet>
-        <title>About Inflow | Inflow Corp.</title>
+        <title>About Inflow | Inflow Co.</title>
         <meta
           name="description"
-          content="Inflow Corp. is an independent engineering consultancy in Saint Paul, Minnesota, founded by Peter Vinck. Listed Xcel Energy study provider and Energy Efficiency Partner Award winner every year since 2015."
+          content="Inflow Co. is an independent engineering consultancy in Saint Paul, Minnesota, founded by Peter Vinck. Listed Xcel Energy study provider and Energy Efficiency Partner Award winner every year since 2015."
         />
       </Helmet>
 
@@ -24,7 +24,7 @@ export default function AboutPage() {
           <p className={styles.eyebrow}>About Inflow</p>
           <h1 className={styles.pageTitle}>An engineering firm, not an equipment dealer</h1>
           <p className={styles.pageSubtitle}>
-            Inflow Corp. is an independent consultancy in Saint Paul, Minnesota. Our fee is the only thing
+            Inflow Co. is an independent consultancy in Saint Paul, Minnesota. Our fee is the only thing
             we are paid, so the recommendation is the one that is right for your plant.
           </p>
         </div>
