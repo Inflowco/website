@@ -39,7 +39,7 @@
     "date-fns": "^4.1.0",
     "embla-carousel": "^8.5.2",
     "embla-carousel-react": "^8.5.2",
-    "hono": "^4.7.5",
+    "hono": "^4.13.11",
     "jsonwebtoken": "^9.0.2",
     "kysely": "0.26.3",
     "kysely-postgres-js": "3.0.0",
