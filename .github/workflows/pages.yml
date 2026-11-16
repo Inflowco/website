@@ -41,7 +41,16 @@ jobs:
           fi
 
       - name: Build static public site
-        run: pnpm vite build && cp dist/index.html dist/404.html
+        run: |
+          pnpm vite build
+          cp dist/index.html dist/404.html
+          # GitHub Pages answers 404 for any path without a file, which keeps
+          # search engines from indexing the routes. Write one copy of the app
+          # shell per public route so each answers 200. Keep this list in step
+          # with public/sitemap.xml.
+          for route in services industrial-gas platform case-studies about contact; do
+            cp dist/index.html "dist/$route.html"
+          done
         env:
           VITE_PUBLIC_ONLY: "1"
           VITE_FORMSPREE_ID: ${{ vars.FORMSPREE_ID }}
